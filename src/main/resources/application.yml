@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      user: root
+      password: root
+      uri: mongodb://localhost:27017/covid_report_db
+
+server:
+  servlet:
+    context-path: /covid-reporting-service
+  port : 8083
+
+
+
