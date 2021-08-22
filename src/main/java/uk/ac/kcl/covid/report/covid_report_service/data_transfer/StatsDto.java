@@ -30,7 +30,7 @@ public class StatsDto {
     @JsonProperty("cough")
     private Long cough;
 
-    @JsonProperty("breathlessnesschest")
+    @JsonProperty("breathlessness")
     private Long breathlessness;
 
     @JsonProperty("total_patients")
