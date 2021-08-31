@@ -3,30 +3,30 @@ package uk.ac.kcl.covid.report.covid_report_service.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import uk.ac.kcl.covid.report.covid_report_service.application_service.SymptomsApplicationService;
+import uk.ac.kcl.covid.report.covid_report_service.application_service.ReportApplicationService;
 import uk.ac.kcl.covid.report.covid_report_service.data_transfer.StatsDto;
 import uk.ac.kcl.covid.report.covid_report_service.data_transfer.SymptomsDto;
 
 import java.util.List;
 
 @RestController
-public class SymptomsController {
+public class ReportController {
 
-    private SymptomsApplicationService symptomsApplicationService;
+    private ReportApplicationService reportApplicationService;
 
-    public SymptomsController(SymptomsApplicationService symptomsApplicationService) {
-        this.symptomsApplicationService = symptomsApplicationService;
+    public ReportController(ReportApplicationService reportApplicationService) {
+        this.reportApplicationService = reportApplicationService;
     }
 
     @GetMapping("/reporting/all")
     public ResponseEntity<List<SymptomsDto>> findAll() {
-        List<SymptomsDto> symptomsDtoList = symptomsApplicationService.findAll();
+        List<SymptomsDto> symptomsDtoList = reportApplicationService.findAll();
         return ResponseEntity.ok(symptomsDtoList);
     }
 
     @GetMapping("/reporting/all/stats")
     public ResponseEntity<StatsDto> findAllStats() {
-        StatsDto statsDto = symptomsApplicationService.findAllWithStats();
+        StatsDto statsDto = reportApplicationService.findAllWithStats();
         return ResponseEntity.ok(statsDto);
     }
 

@@ -1,5 +1,6 @@
 package uk.ac.kcl.covid.report.covid_report_service.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,7 +14,8 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @NoArgsConstructor
 public class Symptoms {
 
-    @JsonProperty("id")
+
+    @JsonIgnore
     @Field
     public String id;
 

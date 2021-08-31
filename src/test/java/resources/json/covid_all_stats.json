@@ -1,0 +1,62 @@
+[
+  {
+    "gender": "Male",
+    "eye_pain": "No",
+    "chest_pain": "Yes",
+    "soar_throat": "Yes",
+    "fever": "Yes",
+    "headache": "Yes",
+    "cough": "Yes",
+    "breathlessness": "No"
+  },
+  {
+    "gender": "Female",
+    "eye_pain": "No",
+    "chest_pain": "Yes",
+    "soar_throat": "No",
+    "fever": "No",
+    "headache": "No",
+    "cough": "Yes",
+    "breathlessness": "No"
+  },
+  {
+    "gender": "Female",
+    "eye_pain": "No",
+    "chest_pain": "No",
+    "soar_throat": "No",
+    "fever": "Yes",
+    "headache": "Yes",
+    "cough": "Yes",
+    "breathlessness": "No"
+  },
+  {
+    "gender": "Male",
+    "eye_pain": "No",
+    "chest_pain": "No",
+    "soar_throat": "No",
+    "fever": "Yes",
+    "headache": "No",
+    "cough": "No",
+    "breathlessness": "No"
+  },
+  {
+    "gender": "Male",
+    "eye_pain": "No",
+    "chest_pain": "No",
+    "soar_throat": "No",
+    "fever": "Yes",
+    "headache": "No",
+    "cough": "Yes",
+    "breathlessness": "No"
+  },
+  {
+    "gender": "Male",
+    "eye_pain": "Yes",
+    "chest_pain": "Yes",
+    "soar_throat": "No",
+    "fever": "Yes",
+    "headache": "Yes",
+    "cough": "Yes",
+    "breathlessness": "Yes"
+  }
+]

@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import uk.ac.kcl.covid.report.covid_report_service.domain.Symptoms;
 
 @Repository
-public interface SymptomsRepository extends MongoRepository<Symptoms, String> {
+public interface ReportRepository extends MongoRepository<Symptoms, String> {
 }

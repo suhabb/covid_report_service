@@ -2,7 +2,7 @@ package uk.ac.kcl.covid.report.covid_report_service.application_service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import uk.ac.kcl.covid.report.covid_report_service.data_service.SymptomsDataService;
+import uk.ac.kcl.covid.report.covid_report_service.data_service.ReportDataService;
 import uk.ac.kcl.covid.report.covid_report_service.data_transfer.StatsDto;
 import uk.ac.kcl.covid.report.covid_report_service.data_transfer.SymptomsDto;
 import uk.ac.kcl.covid.report.covid_report_service.domain.Symptoms;
@@ -13,24 +13,24 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
-public class SymptomsApplicationService {
+public class ReportApplicationService {
 
     public static final String YES = "Yes";
-    private SymptomsDataService symptomsDataService;
+    private ReportDataService reportDataService;
     private Mapper mapper;
 
-    public SymptomsApplicationService(Mapper mapper, SymptomsDataService symptomsDataService) {
-        this.symptomsDataService = symptomsDataService;
+    public ReportApplicationService(Mapper mapper, ReportDataService reportDataService) {
+        this.reportDataService = reportDataService;
         this.mapper = mapper;
     }
 
     public List<SymptomsDto> findAll() {
-        List<Symptoms> symptomsList = this.symptomsDataService.findAll();
+        List<Symptoms> symptomsList = this.reportDataService.findAll();
         return mapper.mapToSymptomsDtoList(symptomsList);
     }
 
     public StatsDto findAllWithStats() {
-        List<Symptoms> symptomsList = this.symptomsDataService.findAll();
+        List<Symptoms> symptomsList = this.reportDataService.findAll();
         List<SymptomsDto> symptomsDtoList = mapper.mapToSymptomsDtoList(symptomsList);
         long coughCount = symptomsDtoList.stream().collect(Collectors
                 .groupingBy(SymptomsDto::getCough, Collectors.counting())).get(YES);
