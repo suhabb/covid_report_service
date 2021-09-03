@@ -35,7 +35,7 @@ What things you need to install the software and how to install them
   - Can import in IntelliJ aand run as main application by adding the Main file
 
 ## API
-  - http://localhost:8083/covid-reporting-service/reporting/all/stats
+  - http://localhost:8083/covid-reporting-service/reporting/all
   - http://localhost:8083/covid-reporting-service/reporting/all/stats
   
 
