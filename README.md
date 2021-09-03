@@ -23,7 +23,7 @@ What things you need to install the software and how to install them
   ```
     use covid_report_db;
     db.createCollection("covid_symptoms");
-    db.covidInfo.createIndex({"id": 1 }, { unique: true } );
+    db.covid_symptoms.createIndex({"id": 1 }, { unique: true } )
     
   ```
   ```
