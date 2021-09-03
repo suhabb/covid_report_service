@@ -2,7 +2,7 @@
 
 Covid Reporting service is traditional blocking service which return mock data of covid symptoms.
 
-- Covid Vacciantion service runs on the port 8083
+- Covid Report service runs on the port 8083
   `` http://localhost:8083``
 
 ## Prerequisites
