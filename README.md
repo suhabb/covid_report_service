@@ -2,7 +2,7 @@
 
 Covid Reporting service is traditional blocking service which return mock data of covid symptoms.
 
-- Covid Vacciantion service runs on the port 8083
+- Covid Report service runs on the port 8083
   `` http://localhost:8083``
 
 ## Prerequisites
@@ -24,7 +24,12 @@ What things you need to install the software and how to install them
     use covid_report_db;
     db.createCollection("covid_symptoms");
     db.covidInfo.createIndex({"id": 1 }, { unique: true } );
-
+    
+  ```
+  ```
+  Import the covid_symtoms.json from resources folder file to mongodb collection "covid_symptoms" :
+  src/main/resources/db_mock_data/covid_symtoms.json
+  
   ```
 ## Start the spring boot service from root folder of the project
   - mvn clean package
@@ -54,4 +59,5 @@ What things you need to install the software and how to install them
   - https://start.spring.io/
   
  ## Dataset
-  - Mock Data 
+  - Generate Mock Data from mockaroo
+     ``https://www.mockaroo.com/``
